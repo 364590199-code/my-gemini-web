@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <title>我的 Gemini App</title>
+    <style>
+        body { font-family: sans-serif; display: flex; justify-content: center; align-items: center; height: 100vh; background: #f0f2f5; margin: 0; }
+        .chat-card { width: 400px; background: white; padding: 20px; border-radius: 15px; box-shadow: 0 4px 15px rgba(0,0,0,0.1); }
+        h2 { color: #1a73e8; text-align: center; }
+        #chat-box { height: 300px; border: 1px solid #ddd; margin-bottom: 10px; padding: 10px; overflow-y: auto; border-radius: 8px; }
+        .input-area { display: flex; gap: 10px; }
+        input { flex: 1; padding: 10px; border: 1px solid #ddd; border-radius: 5px; }
+        button { padding: 10px 20px; background: #1a73e8; color: white; border: none; border-radius: 5px; cursor: pointer; }
+        button:hover { background: #1557b0; }
+    </style>
+</head>
+<body>
+
+<div class="chat-card">
+    <h2>Gemini 助手</h2>
+    <div id="chat-box">欢迎！请输入你想问的问题。</div>
+    <div class="input-area">
+        <input type="text" id="user-input" placeholder="输入消息...">
+        <button onclick="sendMessage()">发送</button>
+    </div>
+</div>
+
+<script>
+    function sendMessage() {
+        const input = document.getElementById('user-input');
+        const box = document.getElementById('chat-box');
+        if (input.value.trim() !== "") {
+            box.innerHTML += `<p><strong>你:</strong> ${input.value}</p>`;
+            box.innerHTML += `<p style="color:blue;"><strong>Gemini:</strong> 这是一个本地演示。要连接真正的 AI，你需要配置 API Key。</p>`;
+            input.value = "";
+            box.scrollTop = box.scrollHeight;
+        }
+    }
+</script>
+
+</body>
+</html>
