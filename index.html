@@ -1,42 +1,25 @@
-<!DOCTYPE html>
-<html lang="zh-CN">
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
 <head>
-    <meta charset="UTF-8">
-    <title>我的 Gemini App</title>
-    <style>
-        body { font-family: sans-serif; display: flex; justify-content: center; align-items: center; height: 100vh; background: #f0f2f5; margin: 0; }
-        .chat-card { width: 400px; background: white; padding: 20px; border-radius: 15px; box-shadow: 0 4px 15px rgba(0,0,0,0.1); }
-        h2 { color: #1a73e8; text-align: center; }
-        #chat-box { height: 300px; border: 1px solid #ddd; margin-bottom: 10px; padding: 10px; overflow-y: auto; border-radius: 8px; }
-        .input-area { display: flex; gap: 10px; }
-        input { flex: 1; padding: 10px; border: 1px solid #ddd; border-radius: 5px; }
-        button { padding: 10px 20px; background: #1a73e8; color: white; border: none; border-radius: 5px; cursor: pointer; }
-        button:hover { background: #1557b0; }
-    </style>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+  <meta http-equiv="Content-Style-Type" content="text/css">
+  <title></title>
+  <meta name="Generator" content="Cocoa HTML Writer">
+  <meta name="CocoaVersion" content="2575.7">
+  <style type="text/css">
+    body {background-color: #e7ebef}
+    p.p2 {margin: 0.0px 0.0px 0.0px 0.0px; font: 12.0px 'PingFang SC'; -webkit-text-stroke: #000000}
+    p.p3 {margin: 0.0px 0.0px 0.0px 0.0px; font: 11.0px 'Helvetica Neue'; -webkit-text-stroke: #000000; background-color: #ffffff; min-height: 12.0px}
+    p.p4 {margin: 0.0px 0.0px 0.0px 0.0px; text-align: center; font: 11.0px 'PingFang SC'; color: #ffffff; -webkit-text-stroke: #ffffff; background-color: #133fdb}
+    span.s1 {font: 18.0px 'PingFang SC'; font-kerning: none; background-color: #ffffff}
+    span.s2 {font-kerning: none; background-color: #ffffff}
+    span.s3 {font-kerning: none}
+  </style>
 </head>
 <body>
-
-<div class="chat-card">
-    <h2>Gemini 助手</h2>
-    <div id="chat-box">欢迎！请输入你想问的问题。</div>
-    <div class="input-area">
-        <input type="text" id="user-input" placeholder="输入消息...">
-        <button onclick="sendMessage()">发送</button>
-    </div>
-</div>
-
-<script>
-    function sendMessage() {
-        const input = document.getElementById('user-input');
-        const box = document.getElementById('chat-box');
-        if (input.value.trim() !== "") {
-            box.innerHTML += `<p><strong>你:</strong> ${input.value}</p>`;
-            box.innerHTML += `<p style="color:blue;"><strong>Gemini:</strong> 这是一个本地演示。要连接真正的 AI，你需要配置 API Key。</p>`;
-            input.value = "";
-            box.scrollTop = box.scrollHeight;
-        }
-    }
-</script>
-
+<h2 style="margin: 0.0px 0.0px 14.9px 0.0px; text-align: center; font: 18.0px 'PingFang SC Semibold'; color: #133fdb; -webkit-text-stroke: #133fdb"><span class="s1"><b>助手</b><b></b></span></h2>
+<p class="p2"><span class="s2">欢迎！请输入你想问的问题。</span></p>
+<p class="p3"><span class="s3"></span><br></p>
+<p class="p4"><span class="s3">AIzaSyBzzMYXFi8vw9GF0CRbMKf_TrC72cCB1sU发送</span></p>
 </body>
 </html>
